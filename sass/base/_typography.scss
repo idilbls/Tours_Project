@@ -1,0 +1,73 @@
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden; /*animasyonun gereksiz sarsılmaması için elementlerin bir üstünde olan taga verilir*/
+    margin-bottom: 6rem;
+
+    
+    &--main{
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+
+        animation-name: moveInLeft; /*animasyonu hangi classa istersek bu şekilde veriyoruz (sayfa yüklenirken çalışır, 
+                                    hover gibi şeylere de verebiliriz üstüne geldiğimizde çalışır) */
+        animation-duration: 1s;
+        /*animation-delay: 3s;
+        animation-iteration-count: 3;  /*animasyon tekrar sayısı*/
+        animation-timing-function: ease-out;
+    }
+
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+    }
+}
+
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block; //yazının bittiği yere kadar arka planı belirler
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text; // arka plan resminin yazının üstünde olmasını sağlar
+    color: transparent; //background-clip'in çalışması için yazının bir rengi olmak zorunda!
+    letter-spacing: .2rem;
+    transition: all .2s; // alttaki skew transformun çalışması için süre vermeliyizç
+
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1); //birden fazla verebiliriz
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+
+}
+
+.heading-tertiary{
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: $default-font-size;
+
+    &:not(:last-child){ //son çocuğun haricindeki herşeyi alır
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,34 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/composition";
+
+@import "layout/header";
+@import "layout/grid";
+
+@import "pages/home";
+
+/*
+çok fazla !important kullanmamalıyız! kod temizliği ve bakım açısından önemli
+daha spesifik olarak belirtilenler ekranda gözükecektir
+ve  sıra olarak en altta olan gözükür!
+*/
+
+/*
+FONT SIZE
+
+%: LER parente göre şekillenir
+em: (font) parente göre boyutunu belirler
+rem:  roota göre boyutunu belirler( ex: default p size :16 dır ona göre belirlenir)
+em: (length) current elemente göre şekillenir.
+
+vh: %90 current view hight
+vw: %90 current view width
+*/
