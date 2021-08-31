@@ -9,6 +9,7 @@
     background-position: top;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*Bir resimi kesmek istediğimiz şekli vermek için. Sol üstten başlayıp saat yönünde yazılır. x sıfırdan başlar */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*Bir resimi kesmek istediğimiz şekli vermek için. Sol üstten başlayıp saat yönünde yazılır. x sıfırdan başlar */
 
     &__logo-box{
         position: absolute;
