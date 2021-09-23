@@ -17,7 +17,7 @@
         shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%); // görüntüsünü yuvarlak yapar
         -webkit-clip-path: circle(50% at 50% 50%);
-        transform: translateX(-3rem) skewx(12deg);
+        transform: translateX(-3rem) skewX(12deg);
         position: relative;
     }
 
